@@ -231,6 +231,10 @@ form{
   border: 1px solid var(--truth-text);
   box-shadow: 2px 4px 8px var(--truth-text);
 }
+form .input-label{
+  display: grid;
+  grid-template-columns: 1fr;
+}
 input{
   padding: 0.5rem;
 }
@@ -375,7 +379,7 @@ footer p{
 
 /* ///ADD///  Feature Query for :has() that checks if the #menu-toggle is checked */
 @supports (selector(:has(*))) {
-  .mobile-nav:has(menu-toggle:checked).menu{
+  .mobile-nav:has(#menu-toggle:checked) .menu {
     display: block;
   }
 }
