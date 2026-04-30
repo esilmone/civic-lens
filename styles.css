@@ -205,21 +205,36 @@ form{
   display:grid;
   grid-template-columns: 1fr;
   padding: 1rem;
-  margin: 1rem;
-  color: var(--watchdog-white)
+  margin: 0.5rem;
+  color: var(--watchdog-white);
+  border: 1px solid var(--truth-text);
+  box-shadow: 2px 4px 8px var(--truth-text);
 }
 input{
   padding: 0.5rem;
 }
+label, fieldset, #submitButton{
+  margin-top: 1rem;
+}
 fieldset{
-  display: 
+  display: flex;
+  flex-direction: column;
   border: 1px solid var(--blue-bulletin);
+}
+fieldset div{
+  padding: 0.5rem;
 }
 #submitButton{
   text-decoration: none;
+  font-family: var(--font-body);
+  font-size: 20px;
   background-color: var(--blue-bulletin);
   color: var(--watchdog-white);
   padding: 0.5rem;
+}
+#submitButton:hover{
+  background-color: var(--watchdog-white);
+  color: var(--blue-bulletin);
 }
 footer{
   background-color: var(--blue-bulletin);
