@@ -102,24 +102,26 @@ body.dark-mode {
 
 
 /* ///ADD/// Navigation Styles */
-.menu-button{
-  position: absolute;
-  left:-1000px;
-}
-nav ul{
-  display: flex;
-}
 nav li{
-  list-style: none;
+  visibility: hidden;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
 }
-nav a{
-  color: var(--watchdog-white);
+.menu-button{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+nav a, .menu-button{
   text-decoration: none;
+  color: var(--watchdog-white);
   background-color: var(--news-flash);
   padding: 0.5rem;
   margin: 0.5rem;
 }
-nav a:hover{
+nav a:hover, .menu-button:hover{
   background-color: var(--watchdog-white);
 }
 
@@ -276,8 +278,19 @@ footer p{
 /* ///ADD/// medium styles 620px */
 @media screen and (min-width: 620px) {
   #breaking-news{
-  grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+  .menu-button{
+    position: absolute;
+    left:-1000px;
+  }
+  nav ul{
+  display: flex;
 }
+  nav li{
+    visibility: visible;
+    position: relative;
+  }
 }
 
 /* ///ADD/// large styles 920px */
@@ -324,6 +337,9 @@ footer p{
 
 
 /* ///ADD///  Feature Query for :has() that checks if the #menu-toggle is checked */
-@supports (selector(:has(*))) {
-
+@supports (input:has(#menu-toggle:checked)) {
+  nav li{
+    visibility: visible;
+    position: relative;
+  }
 }
