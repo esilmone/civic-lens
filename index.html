@@ -5,10 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="Civic Lens is an independent news organization committed to unbiased reporting, investigative journalism, and truth-driven storytelling.">
-  <meta name="author" content="Civic Lens">
+  <meta name="author" content="Einna Silmone">
+  <meta name="title" content="Civic Lens">
 
 <!-- ADD Open Graph Meta for title, description, image, url, type -->
-
+  <meta property="og:title" content="Civic Lens Independent Journalism and Storytelling">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://via.placeholder.com/">
+  <meta property="og:url" content="">
 <!-- ADD link to stylesheet -->
   <link rel="stylesheet" href="styles.css">
 
@@ -33,10 +37,10 @@
         <input type="checkbox" id="menu-toggle" hidden>
         <label for="menu-toggle" class="menu-button">Menu</label>
         <ul class="menu">
-          <li><a href="#breaking-news">Breaking News</a></li>
-          <li><a href="#featured-articles">Featured Articles</a></li>
-          <li><a href="#alerts">Alerts</a></li>
-          <li><a href="#social">Social</a></li>
+          <li><a href="#breaking-news">BREAKING NEWS</a></li>
+          <li><a href="#featured-articles">FEATURED ARTICLES</a></li>
+          <li><a href="#alerts">ALERTS</a></li>
+          <li><a href="#social">SOCIAL</a></li>
         </ul>
       </nav>
   </header>
@@ -125,12 +129,15 @@
         <h2>Stay Informed. Stay Empowered.</h2>
           <p>Receive text messages with the news you want to know.</p>
           
-          <form>
-            <label for="fName">Name</label>
-            <input type="text" id="fName">
-            
-            <label for="phoneNum">Mobile</label>
-            <input type="tel" id="phoneNum">
+          <form action="post" method="https://wp.zybooks.com/form-viewer.php">
+            <!-- <div> -->
+              <label for="fName">Name</label>
+              <input type="text" id="fName">
+            <!-- </div>
+            <div>               -->
+              <label for="phoneNum">Mobile</label>
+              <input type="tel" id="phoneNum">
+            <!-- </div> -->
             
             <fieldset>
             <legend>Notification Preferences</legend>
