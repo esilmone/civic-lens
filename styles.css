@@ -129,6 +129,8 @@ nav a:hover{
 body{
   background-color: var(--watchdog-white);
   font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5rem;
 }
 main{
   padding: 2.5rem;
@@ -170,6 +172,12 @@ header{
   background-color: var(--news-flash);
   color: var(--watchdog-white);
   padding: 1rem;
+  border: 1px solid var(--truth-text);
+  box-shadow: 2px 4px 8px var(--truth-text);
+}
+video{
+  height: auto;
+  width 100%;
 }
 #featured-articles{
   display: grid;
