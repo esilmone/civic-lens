@@ -323,8 +323,18 @@ footer p{
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+  form .input-label{
+    display: flex;
+    flex-direction: column;  
+    margin: 0.5em;
+  }
   fieldset{
+    display:grid;
     grid-template-columns: 1fr 1fr;
+    grid-column: 1 / -1;
+  }
+  #submitButton{
+    grid-column: 1 / -1;
   }
 }
 
@@ -345,6 +355,10 @@ footer p{
   }
   #featured-articles section{
     width: 20vw;
+  }
+  fieldset{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column: 1 / -1;
   }
 }
 
