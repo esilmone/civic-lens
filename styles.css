@@ -337,7 +337,7 @@ footer p{
 
 
 /* ///ADD///  Feature Query for :has() that checks if the #menu-toggle is checked */
-@supports (input:has(#menu-toggle:checked)) {
+@supports (#menu-toggle:has(*)) {
   nav li{
     visibility: visible;
     position: relative;
