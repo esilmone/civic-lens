@@ -132,17 +132,31 @@
             <label for="phoneNum">Mobile</label>
             <input type="tel" id="phoneNum">
             
-            Notification Preferences
-            
-            Breaking News                                                                                                                                           
-            Politics
-            Weather
-            Sports
-            Entertainment
-            World
-            Financial
-            
-            <input type="submit" id="submitButton">Subscribe
+            <fieldset>
+            <legend>Notification Preferences</legend>
+              <input type="checkbox" id="news" name="preference" value="news">
+              <label for="news">Breaking News</label>
+
+              <input type="checkbox" id="politics" name="preference" value="politics">
+              <label for="politics">Politics</label>
+
+              <input type="checkbox" id="weather" name="preference" value="weather">
+              <label for="weather">Weather</label>
+
+              <input type="checkbox" id="sports" name="preference" value="sports">
+              <label for="sports">Sports</label>
+
+              <input type="checkbox" id="entertainment" name="preference" value="entertainment">
+              <label for="entertainment">Entertainment</label>
+
+              <input type="checkbox" id="world" name="preference" value="world">
+              <label for="world">World</label>
+
+              <input type="checkbox" id="financial" name="preference" value="financial">
+              <label for="financial">Financial</label>
+            </fieldset>
+
+            <input type="submit" id="submitButton" value="Subscribe">
           </form>
       </section>
     </main>
