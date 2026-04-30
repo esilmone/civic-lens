@@ -17,7 +17,7 @@
 <body>
 <!-- ADD semantic and validated HTML -->
 <!-- ADD skip to main content -->
-  <heading>
+  <header>
     <button id="theme-toggle" aria-label="Toggle light/dark mode">
       <svg width="35px" height="35px" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
         <defs><clipPath id="a"><path d="m18.512 18.512h62.977v62.977h-62.977z"/></clipPath></defs>
@@ -38,21 +38,25 @@
           <li><a href="#social">Social</a></li>
         </ul>
       </nav>
-  </heading>
+  </header>
     <main>  
-      <h2>Welcome to Civic Lens</h2>
-        <p>We are an independent news organization dedicated to unbiased reporting, investigative journalism, and truth-driven storytelling. At Civic Lens, our mission is to expose the facts, amplify marginalized voices, and shine light on the systems that shape our society.</p>
-        <blockquote class="tagline">“We don't follow the narrative. We follow the facts.”</blockquote>
+      <section id="intro">
+        <h2>Welcome to Civic Lens</h2>
+          <p>We are an independent news organization dedicated to unbiased reporting, investigative journalism, and truth-driven storytelling. At Civic Lens, our mission is to expose the facts, amplify marginalized voices, and shine light on the systems that shape our society.</p>
+          <blockquote class="tagline">“We don't follow the narrative. We follow the facts.”</blockquote>
+      </section>
       <section id="breaking-news">  
         <h2>Breaking News</h2>
-
-          <h3>Federal Investigation Launched into Water Mismanagement in the Southwest</h3>
-          <p>The Department of Justice has announced a full investigation into decades of water distribution practices affecting tribal lands and rural communities.
-          videos/water-management.mp4</p>
-          
-          <h3>Voter Suppression Bill Faces Pushback in State Supreme Court</h3>
-          <p>Civil rights advocates argue that the bill disenfranchises thousands of voters and potential voters of color and those in rural areas of the country.
-          videos/voter-suppression.mp4</p>
+          <section id="news1">
+            <h3>Federal Investigation Launched into Water Mismanagement in the Southwest</h3>
+            <p>The Department of Justice has announced a full investigation into decades of water distribution practices affecting tribal lands and rural communities.
+            videos/water-management.mp4</p>
+          </section>
+          <section id="news2">
+            <h3>Voter Suppression Bill Faces Pushback in State Supreme Court</h3>
+            <p>Civil rights advocates argue that the bill disenfranchises thousands of voters and potential voters of color and those in rural areas of the country.
+            videos/voter-suppression.mp4</p>
+          </section> 
       </section>
       <section id="featured-articles">
         <h2>Featured Articles</h2>
@@ -76,7 +80,7 @@
             <p>Data visualization showing systemic inequality in real estate today.</p>
           </section>
           
-          <section id="article5"></section>
+          <section id="article5">
             <h3>Climate Injustice: Who Pays for Pollution?</h3>
             <p>Communities of color bear the brunt of environmental damage.</p>
           </section>
