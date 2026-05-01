@@ -121,13 +121,13 @@ nav a, .menu-button{
   background-color: var(--news-flash);
   padding: 0.5rem;
   margin: 0.1rem;
-  transition: background-color 0.3s ease-in-out;
+  transition: var(--transition);
   border: 1px solid var(--blue-bulletin);
 }
 nav a:hover, .menu-button:hover{
   background-color: var(--blue-bulletin);
   border: 1px solid var(--news-flash);
-  transition: background-color 0.3s ease-in-out;
+  transition: var(--transition);
 }
 
 
@@ -202,11 +202,11 @@ header .tagline{
   padding: 1rem;
   border: 1px solid var(--truth-text);
   box-shadow: var(--shadow);
-  transition: transform 0.3s ease-in-out;
+  transition: var(--transition);
 }
 #breaking-news section:hover{
   transform: scale(103%);
-  transition: transform 0.3s ease-in-out;
+  transition: var(--transition);
 }
 video{
   height: auto;
@@ -226,11 +226,11 @@ video{
   padding: 1rem;
   border: 1px solid var(--story-subtitle);
   box-shadow: var(--shadow);
-  transition: transform 0.3s ease-in-out;
+  transition: var(--transition);
 }
 #featured-articles section:hover{
   transform: scale(103%);
-  transition: transform 0.3s ease-in-out;
+  transition: var(--transition);
 }
 form{
   background-color: var(--news-flash);
@@ -267,19 +267,21 @@ fieldset div{
   background-color: var(--blue-bulletin);
   color: var(--watchdog-white);
   padding: 0.5rem;
-  transition: background-color 0.3s ease-in-out;
+  transition: var(--transition);
 }
 #submitButton:hover{
   background-color: var(--watchdog-white);
   color: var(--blue-bulletin);
-  transition: background-color 0.3s ease-in-out;
+  transition: var(--transition);
+}
+footer{
+  background-color: var(--blue-bulletin);
+  padding: 1rem;
+  color: var(--watchdog-white);
 }
 #social{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  background-color: var(--blue-bulletin);
-  padding: 1rem;
-  color: var(--watchdog-white);
 }
 footer h2{
   margin: 1.5rem 0.5rem;
@@ -289,12 +291,15 @@ footer a{
   text-decoration: none;
   color: var(--watchdog-white);
   background-color: var(--news-flash);
+  border: 1px solid var(--news-flash);
+  transition: var(--transition);
   padding: 0.5rem;
   margin: 0.5rem;
 }
 footer a:hover{
-  background-color: var(--watchdog-white);
-  color: var(--news-flash);
+  background-color: var(--blue-bulletin);
+  border: 1px solid var(--news-flash);
+  transition: var(--transition);
 }
 footer p{
   text-align: center;
@@ -305,11 +310,6 @@ footer p{
 
 
 /* ///ADD/// Global Text Styles */
-body p{
-  font-width: 80%;
-}
-
-
 /* ///ADD/// medium styles 620px */
 @media screen and (min-width: 620px) {
   #breaking-news{
@@ -333,6 +333,7 @@ body p{
   #breaking-news{
     grid-template-columns: 1fr 1fr;
     grid-gap: 1.5rem;
+    margin: 0 auto;
   }
   #featured-articles{
     grid-template-columns: 1fr 1fr;
@@ -363,7 +364,7 @@ body p{
 
 /* ///ADD/// x-large styles 1024px */
 @media screen and (min-width: 1024px) {
-  main{
+  main, #head-styling{
     max-width: 70vw;
     margin: 0 auto;
   }
@@ -382,27 +383,37 @@ body p{
     grid-template-columns: 1fr 1fr 1fr;
     grid-column: 1 / -1;
   }
+  #social{
+    max-width: 70vw;
+    margin: 0 auto;    
+  }
 }
 
 
 
 /* ///ADD/// Interaction Queries for color scheme light and dark and motion preference */
-@media (prefers-color-scheme: light) {
-  body{
-  background-color: var(--watchdog-white);
-  color: var(--truth-text);
-}
 @media (prefers-color-scheme: dark) {
   body{
   background-color: var(--truth-text);
   color: var(--watchdog-white);
 }
 }
+@media (prefers-color-scheme: light) {
+  body{
+  background-color: var(--watchdog-white);
+  color: var(--truth-text);
+}
+}
+@media (prefers-reduced-motion: reduce) {
+  #breaking-news section:hover, #featured-articles section:hover{
+    transform: scale(100%);
+  }
+}
 
 
 /* ///ADD///  Feature Query for :has() that checks if the #menu-toggle is checked */
 @supports (selector(:has(*))) {
-  .mobile-nav:has(#menu-toggle:checked) .menu {
+  .mobile-nav:has(#menu-toggle:checked).menu {
     display: block;
-  }
+}
 }
