@@ -413,7 +413,7 @@ footer p{
 
 /* ///ADD///  Feature Query for :has() that checks if the #menu-toggle is checked */
 @supports (selector(:has(*))) {
-  .mobile-nav:has(#menu-toggle:checked).menu {
+  .mobile-nav:has(#menu-toggle:checked) .menu {
     display: block;
 }
 }
